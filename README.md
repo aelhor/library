@@ -35,7 +35,7 @@ A simple library management system built using Node.js, Express, PostgreSQL, and
 1. Clone the repository:
 
 ```bash
-   git clone <repository-url>
+   git clone <https://github.com/aelhor/library.git>
    cd library-management-system
 ```
 
@@ -55,13 +55,32 @@ Update your database connection settings in src/config/db.js.
 
 ## Usage
 
-Start the application:
+- Local environment
+
+  Start the application:
 
 ```bash
 npm start
 ```
-
 The server will run on http://localhost:3000
+
+
+- Using Docker
+  1. Add this to .env variable
+
+```js
+DB_USER = postgres;
+DB_HOST = db;
+DB_NAME = library;
+DB_PASSWORD = password;
+DB_PORT = 5432;
+```
+
+2. build images and containers
+
+```bash
+docker-compose up
+```
 
 ## API Endpoints
 
