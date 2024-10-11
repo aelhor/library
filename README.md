@@ -17,6 +17,7 @@ A simple library management system built using Node.js, Express, PostgreSQL, and
 - Add, update, delete, and search for books.
 - Borrow and return books with tracking.
 - Generate analytical reports for borrowing activities.
+- Basic Authentication
 - Export overdue and borrowing data as CSV files.
 - Basic rate limiting for selected API endpoints.
 - Unit testing for core functionalities.
@@ -62,8 +63,8 @@ Update your database connection settings in src/config/db.js.
 ```bash
 npm start
 ```
-The server will run on http://localhost:3000
 
+The server will run on http://localhost:3000
 
 - Using Docker
   1. Add this to .env variable
