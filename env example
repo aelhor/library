@@ -1,0 +1,18 @@
+NODE_ENV = development
+JWT_SECRET = AAhh7767n
+
+
+# DB_USER = postgres      
+# DB_HOST = localhost             
+# DB_NAME = library    
+# DB_PASSWORD = 1234    
+# DB_PORT = 5433            
+
+
+# Docker 
+DB_USER = postgres      
+DB_HOST = db             
+DB_NAME = library    
+DB_PASSWORD = password    
+DB_PORT = 5432            
+
