@@ -64,6 +64,12 @@ Update your database connection settings in src/config/db.js.
 npm start
 ```
 
+Start in watch mode using nodemon
+
+```bash
+npm run dev
+```
+
 The server will run on http://localhost:3000
 
 - Using Docker
@@ -77,7 +83,7 @@ DB_PASSWORD = password;
 DB_PORT = 5432;
 ```
 
-2. build images and containers
+  2. build images and containers
 
 ```bash
 docker-compose up
