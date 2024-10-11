@@ -33,10 +33,6 @@ class BorrowingController {
         .status(200)
         .json({ message: "Book returned successfully", updatedBorrowing });
     } catch (error) {
-      //   if (error.statusCode === 401) {
-      // return res.status(401).json({ error: error.message });
-      //   }
-      //   res.status(400).json({ error: error.message });
       next(error);
     }
   }
@@ -54,8 +50,7 @@ class BorrowingController {
       );
       res.status(200).json(borrowedBooks);
     } catch (error) {
-      //   res.status(500).json({ error: "Internal Server Error" });
-      next(error); // Pass the error to the global error handler
+      next(error); 
     }
   }
 
@@ -72,7 +67,6 @@ class BorrowingController {
       );
       res.status(200).json(overdueBooks);
     } catch (error) {
-      //   res.status(500).json({ error: "Internal Server Error" });
       next(error);
     }
   }
@@ -104,7 +98,10 @@ class BorrowingController {
         1,
         100
       ); // Get overdue books for the last month
-      const filename = path.join(__dirname, "../../exports/overdue_borrows.csv");
+      const filename = path.join(
+        __dirname,
+        "../../exports/overdue_borrows.csv"
+      );
       await borrowingService.exportBorrowingToCSV(overdueData, filename);
       res.download(filename);
     } catch (error) {
@@ -122,7 +119,10 @@ class BorrowingController {
         oneMonthAgo,
         new Date()
       );
-      const filename = path.join(__dirname, "../../exports/borrowing_process.csv");
+      const filename = path.join(
+        __dirname,
+        "../../exports/borrowing_process.csv"
+      );
       await borrowingService.exportBorrowingToCSV(borrowingData, filename);
       res.download(filename);
     } catch (error) {

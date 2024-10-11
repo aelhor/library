@@ -214,9 +214,6 @@ class BookService {
 
     if (result.rows.length === 0) {
       throw new AppError("Unauthorized access to this borrowing record", 401); // Unauthorized error
-
-      //   error.statusCode = 401; // Set status code for Unauthorized
-      //   throw error;
     }
 
     return result.rows[0]; // Return the borrowing record if found
