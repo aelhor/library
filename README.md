@@ -82,7 +82,6 @@ DB_NAME = library;
 DB_PASSWORD = password;
 DB_PORT = 5432;
 ```
-
   2. build images and containers
 
 ```bash
